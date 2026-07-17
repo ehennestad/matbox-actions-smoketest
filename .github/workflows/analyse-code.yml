@@ -1,0 +1,23 @@
+name: Analyse code
+
+# Smoke test: exercise matbox-actions check-code-workflow against @main.
+# On demand and weekly only; the test-code workflow already runs code
+# analysis on every push, so this avoids doubling MATLAB setup cost there.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 6 * * 1'
+
+permissions:
+  contents: write
+  security-events: write
+
+jobs:
+  check_code:
+    name: Run code analyser
+    uses: ehennestad/matbox-actions/.github/workflows/check-code-workflow.yml@main
+    with:
+      source_directory: src
+      tools_directory: tools
+      matlab_release: latest

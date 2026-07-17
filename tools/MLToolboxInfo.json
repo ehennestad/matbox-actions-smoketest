@@ -1,0 +1,14 @@
+{
+    "Namespace": "smoketest",
+    "ToolboxOptions": {
+        "Identifier": "da2a63b0-7921-44ba-acdd-347fca64c303",
+        "ToolboxName": "matbox-actions-smoketest",
+        "AuthorName": "Eivind Hennestad",
+        "AuthorEmail": "",
+        "AuthorCompany": "",
+        "Summary": "Minimal toolbox for smoke-testing matbox-actions",
+        "Description": "Trivial toolbox used to exercise the matbox-actions workflows against the main branch before a release is tagged.",
+        "MinimumMatlabRelease": "R2021a",
+        "MaximumMatlabRelease": ""
+    }
+}

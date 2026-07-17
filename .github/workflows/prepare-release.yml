@@ -1,0 +1,38 @@
+name: Prepare toolbox release
+
+# Smoke test: exercise the full matbox-actions release pipeline against @main
+# (validate version, build matrix, test, package, draft release, verify install).
+# Trigger manually with a version, or by pushing a vX.Y.Z tag.
+#
+# Requires a DEPLOY_KEY secret (SSH private key whose public key is added as a
+# deploy key with write access). The matlab_versions list is kept small on
+# purpose to limit MATLAB CI minutes for a smoke test.
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number in major.minor.patch format'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  prepare-release:
+    name: Prepare toolbox release
+    uses: ehennestad/matbox-actions/.github/workflows/prepare-release-workflow.yml@main
+    with:
+      version: ${{ inputs.version }}
+      ref_name: ${{ github.ref_name }}
+      source_directory: src
+      tests_directory: tests
+      tools_directory: tools
+      matlab_versions: '["R2024b"]'
+      needs_python: false
+    secrets:
+      DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}

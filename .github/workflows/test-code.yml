@@ -1,0 +1,33 @@
+name: Test code
+
+# Smoke test: exercise matbox-actions test-code-workflow against @main.
+# Runs on changes here, on demand, and weekly to catch drift in
+# matbox-actions@main even when this repo is unchanged.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  security-events: write
+  checks: write
+
+jobs:
+  test-code:
+    name: Analyse and test code
+    uses: ehennestad/matbox-actions/.github/workflows/test-code-workflow.yml@main
+    with:
+      source_directory: src
+      tests_directory: tests
+      tools_directory: tools
+      matlab_release: latest

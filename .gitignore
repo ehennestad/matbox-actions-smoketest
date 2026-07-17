@@ -1,0 +1,6 @@
+# MATLAB
+*.asv
+*.mltbx
+
+# Generated CI reports (badges under .github/badges are committed by CI)
+docs/reports/
