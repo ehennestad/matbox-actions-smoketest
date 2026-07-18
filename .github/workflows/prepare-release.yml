@@ -5,8 +5,13 @@ name: Prepare toolbox release
 # Trigger manually with a version, or by pushing a vX.Y.Z tag.
 #
 # Requires a DEPLOY_KEY secret (SSH private key whose public key is added as a
-# deploy key with write access). The matlab_versions list is kept small on
-# purpose to limit MATLAB CI minutes for a smoke test.
+# deploy key with write access). matlab_versions spans this toolbox's minimum
+# supported release through a recent one, deliberately spread rather than a
+# single version, so the test matrix's multi-job fan-out (parallel jobs,
+# per-version report artifacts, badge aggregation across them) is actually
+# exercised, and so install-matbox is exercised on more than one MATLAB
+# release: it caught a real regression (release-mode install failing on
+# R2024b) that a single, always-"latest" version would have missed.
 
 on:
   push:
@@ -39,7 +44,7 @@ jobs:
       source_directory: src
       tests_directory: tests
       tools_directory: tools
-      matlab_versions: '["R2024b"]'
+      matlab_versions: '["R2021a", "R2024b", "R2026a"]'
       needs_python: false
     secrets:
       DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
