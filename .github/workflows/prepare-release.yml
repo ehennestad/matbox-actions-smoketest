@@ -24,8 +24,12 @@ on:
         required: true
         type: string
 
+# checks: write is needed by the publish-test-results step inside the
+# pipeline's test job; an explicit permissions block sets every unlisted
+# permission to none, so omitting it caused 403s on check-run creation.
 permissions:
   contents: write
+  checks: write
 
 # Serialize releases rather than cancelling one: the pipeline pushes to shared
 # refs (main, gh-badges), and killing a run mid-push would leave those refs
