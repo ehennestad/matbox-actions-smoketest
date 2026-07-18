@@ -22,6 +22,13 @@ on:
 permissions:
   contents: write
 
+# Serialize releases rather than cancelling one: the pipeline pushes to shared
+# refs (main, gh-badges), and killing a run mid-push would leave those refs
+# in a half-updated state. Concurrent runs race on those pushes without this.
+concurrency:
+  group: prepare-release
+  cancel-in-progress: false
+
 jobs:
   prepare-release:
     name: Prepare toolbox release
