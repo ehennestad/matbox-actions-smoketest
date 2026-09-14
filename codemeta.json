@@ -15,7 +15,7 @@
     "matbox-actions",
     "smoke test"
   ],
-  "releaseNotes": "https://github.com/ehennestad/matbox-actions-smoketest/releases#release-v0.0.8",
+  "releaseNotes": "https://github.com/ehennestad/matbox-actions-smoketest/releases/tag/v0.0.8",
   "developmentStatus": "active",
   "programmingLanguage": [
     "MATLAB"
