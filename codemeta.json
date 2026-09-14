@@ -1,0 +1,51 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "license": "https://spdx.org/licenses/MIT",
+  "codeRepository": "https://github.com/ehennestad/matbox-actions-smoketest",
+  "readme": "https://github.com/ehennestad/matbox-actions-smoketest/blob/main/README.md",
+  "contIntegration": "https://github.com/ehennestad/matbox-actions-smoketest/actions",
+  "issueTracker": "https://github.com/ehennestad/matbox-actions-smoketest/issues",
+  "name": "matbox-actions-smoketest",
+  "description": "Trivial toolbox used to exercise the matbox-actions workflows against the main branch before a release is tagged.",
+  "applicationCategory": "Developer tools",
+  "keywords": [
+    "MATLAB toolbox",
+    "GitHub Actions",
+    "matbox-actions",
+    "smoke test"
+  ],
+  "releaseNotes": "https://github.com/ehennestad/matbox-actions-smoketest/releases#release-v0.0.8",
+  "developmentStatus": "active",
+  "programmingLanguage": [
+    "MATLAB"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "Windows",
+    "macOS"
+  ],
+  "runtimePlatform": "MATLAB R2021a or later",
+  "relatedLink": [
+    "https://github.com/ehennestad/matbox-actions"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0002-8297-1753",
+      "givenName": "Eivind",
+      "familyName": "Hennestad"
+    }
+  ],
+  "maintainer": {
+    "@type": "Person",
+    "@id": "https://orcid.org/0000-0002-8297-1753",
+    "givenName": "Eivind",
+    "familyName": "Hennestad"
+  },
+  "version": "0.0.8",
+  "downloadUrl": "https://github.com/ehennestad/matbox-actions-smoketest/releases/download/v0.0.8/matbox-actions-smoketest_v0_0_8.mltbx",
+  "dateCreated": "2026-07-17",
+  "datePublished": "2026-07-18",
+  "dateModified": "2026-09-07"
+}
