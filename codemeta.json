@@ -15,7 +15,7 @@
     "matbox-actions",
     "smoke test"
   ],
-  "releaseNotes": "https://github.com/ehennestad/matbox-actions-smoketest/releases/tag/v0.0.11",
+  "releaseNotes": "https://github.com/ehennestad/matbox-actions-smoketest/releases/tag/v0.0.12",
   "developmentStatus": "active",
   "programmingLanguage": [
     "MATLAB"
@@ -43,9 +43,9 @@
     "givenName": "Eivind",
     "familyName": "Hennestad"
   },
-  "version": "0.0.11",
-  "downloadUrl": "https://github.com/ehennestad/matbox-actions-smoketest/releases/download/v0.0.11/matbox-actions-smoketest_v0_0_11.mltbx",
+  "version": "0.0.12",
+  "downloadUrl": "https://github.com/ehennestad/matbox-actions-smoketest/releases/download/v0.0.12/matbox-actions-smoketest_v0_0_12.mltbx",
   "dateCreated": "2026-07-17",
   "datePublished": "2026-07-18",
-  "dateModified": "2026-09-18"
+  "dateModified": "2026-09-24"
 }
