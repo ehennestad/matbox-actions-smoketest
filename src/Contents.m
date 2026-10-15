@@ -1,5 +1,5 @@
 % matbox-actions-smoketest
-% Version 0.0.12 (R2021a+) 24-Sep-2026
+% Version 0.0.13 (R2021a+) 15-Oct-2026
 %
 % Copyright (c) 2026, Eivind Hennestad
 % ------------------------------------
